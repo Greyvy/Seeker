@@ -54,13 +54,13 @@ function Map.draw(m)
     end
 end
 
-function Map.tile_to_screen(map, map_layer, index)
-    local x = (index - 1) % map.size[1] * map.tilesize[1]
-    local y = math.floor((index - 1) / map.size[2]) * map.tilesize[2]
+function Map.tile_to_screen(m, map_layer, index)
+    local x = (index - 1) % m.size[1] * m.tilesize[1]
+    local y = math.floor((index - 1) / m.size[2]) * m.tilesize[2]
 
     return {
         pos = { x, y },
-        size = { map.tilesize[1], map.tilesize[2] }
+        size = { m.tilesize[1], m.tilesize[2] }
     }
 end
 
